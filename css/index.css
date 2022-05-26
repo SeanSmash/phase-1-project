@@ -8,10 +8,16 @@ nav {
     text-align: center;
 }
 
+#form-title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 12pt;
+}
+
 .form-container {
     text-align: left;
     border: grey solid 1px;
-    padding: 1rem;
+    padding: .1rem 1rem 1rem 1rem;
     margin: 1rem 2rem;
     background-color: whitesmoke;
     box-shadow: 3px 4px #6495ED

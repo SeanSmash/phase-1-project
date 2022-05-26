@@ -8,7 +8,7 @@
       "instructions": "slice chicken. sautee. serve.",
       "inspiredBy": "Gordon Ramsay",
       "id": 1,
-      "likes": 1
+      "likes": 3
     },
     {
       "recipeTitle": "Pulled Pork",
@@ -19,7 +19,18 @@
       "inspiredBy": "Aaron Franklin",
       "category": "main",
       "id": 2,
-      "likes": 0
+      "likes": 2
+    },
+    {
+      "recipeTitle": "risotto",
+      "chef": "Sean",
+      "familyStory": "we like this",
+      "ingredients": "rice, butter, parmesan, onion, peas",
+      "instructions": "sautee onions, cook rice",
+      "inspiredBy": "Jaime Oliver",
+      "category": "main",
+      "likes": 8,
+      "id": 3
     }
   ]
 }
