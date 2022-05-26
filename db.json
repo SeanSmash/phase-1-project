@@ -1,0 +1,13 @@
+{
+  "Recipes": [
+    {
+      "title": "pulled pork",
+      "chef": "sean",
+      "familyStory": "lots of memories",
+      "ingredients": "pork butt",
+      "instructions": "smoke pork butt",
+      "inspiredBy": "Aaron Franklin",
+      "id": 1
+    }
+  ]
+}
