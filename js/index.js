@@ -79,10 +79,11 @@ function renderRecipe(recipe){
     div.className = 'recipe-card'
     const h2 = document.createElement('h2')
     h2.className = 'title'
-    h2.textContent = `Recipe Title: ${recipe.recipeTitle}`
+    h2.style = 'text-decoration: underline'
+    h2.textContent = recipe.recipeTitle
     const h3 = document.createElement('h3')
     h3.className = 'chef'
-    h3.textContent = `by Chef ${recipe.chef}`
+    h3.textContent = `by: Chef ${recipe.chef}`
     const asideStory = document.createElement('aside')
     asideStory.className = 'family-story'
     asideStory.textContent = `Family Story: ${recipe.familyStory}`
