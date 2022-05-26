@@ -42,19 +42,19 @@ function renderRecipe(recipe){
     const asideStory = document.createElement('aside')
     const pIngredients = document.createElement('p')
     const pInstructions = document.createElement('p')
-    const inspirations = document.createElement('h3')
+    const inspirations = document.createElement('p')
     h2.className = 'title'
-    h2.textContent = recipe.recipeTitle
+    h2.textContent = `Recipe Title: ${recipe.recipeTitle}`
     h3.className = 'chef'
-    h3.textContent = recipe.chef
+    h3.textContent = `by Chef ${recipe.chef}`
     asideStory.className = 'family-story'
-    asideStory.textContent = recipe.familyStory
+    asideStory.textContent = `Family Story: ${recipe.familyStory}`
     pIngredients.className = 'ingredients'
-    pIngredients.textContent = recipe.ingredients
+    pIngredients.textContent = `Ingredients: ${recipe.ingredients}`
     pInstructions.className = 'instructions'
-    pInstructions.textContent = recipe.instructions
+    pInstructions.textContent = `Instructions: ${recipe.instructions}`
     inspirations.className = 'inspirations'
-    inspirations.textContent = recipe.inspiredBy
+    inspirations.textContent = `Inspired by / Contributors: ${recipe.inspiredBy}`
     div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations)
     recipeSection.append(div)
 }
