@@ -40,3 +40,14 @@
 - Roasted Brussels Sprouts
 - Grilled Asparagus
 - Fettucini Alfredo
+- Risotto
+- Peanutbutter cups
+- Cream brulee
+
+### Blog Ideas
+- The Little Checks Matter
+- using console.log
+- see it with many demos
+- probably better and more sophisticated ways, but for newbies, it's great
+- grabbing wrong element for likes (button vs p)
+- easier to check often after little changes than wait until you have a long block of code to figure out you're not returning what you need

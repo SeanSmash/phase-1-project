@@ -2,12 +2,13 @@
   "Recipes": [
     {
       "recipeTitle": "red curry",
-      "chef": "sean",
+      "chef": "Sean",
       "familyStory": "yummy times",
       "ingredients": "chicken, curry, basil",
       "instructions": "slice chicken. sautee. serve.",
       "inspiredBy": "Gordon Ramsay",
-      "id": 1
+      "id": 1,
+      "likes": 0
     },
     {
       "recipeTitle": "Pulled Pork",
@@ -17,28 +18,8 @@
       "instructions": "smoke pork butt. shred. serve",
       "inspiredBy": "Aaron Franklin",
       "category": "main",
-      "id": 2
-    },
-    {
-      "recipeTitle": "1",
-      "chef": "2",
-      "familyStory": "3",
-      "ingredients": "4",
-      "instructions": "5",
-      "inspiredBy": "6",
-      "category": "starter",
-      "id": 3
-    },
-    {
-      "recipeTitle": "1",
-      "chef": "2",
-      "familyStory": "3",
-      "ingredients": "4",
-      "instructions": "5",
-      "inspiredBy": "6",
-      "category": "starter",
-      "likes": 0,
-      "id": 4
+      "id": 2,
+      "likes": 0
     }
   ]
 }

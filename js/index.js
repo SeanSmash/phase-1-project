@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function (){
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
     .then(data => renderAllRecipes(data))
+    document.addEventListener('click', e =>{
+        if(e.target.matches('.like-btn')){
+            updateLikes(e)
+        }
+    })
 })
 
 const renderAllRecipes = recipes => {
@@ -90,11 +95,12 @@ function renderRecipe(recipe){
     inspirations.className = 'inspirations'
     inspirations.textContent = `Inspired by / Contributors: ${recipe.inspiredBy}`
     const pLikes = document.createElement('span')
+    pLikes.id = recipe.id
     pLikes.textContent = `  ${recipe.likes} likes!`
     const likeBtn = document.createElement('button')
     likeBtn.id = recipe.id
     likeBtn.className = 'like-btn'
-    likeBtn.innerHTML = `Like &#10084`
+    likeBtn.innerHTML = `Like &#128420`
     div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
     recipeSection.append(div)
 }
@@ -120,3 +126,21 @@ const clearRecipes = () => {
         recipeSection.removeChild(recipeSection.firstChild)
     }
 }
+
+const updateLikes = e => {
+    e.preventDefault()
+    fetch(`http://localhost:3000/Recipes/${e.target.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          'likes': parseInt(e.target.parentElement.children[7].textContent.split(" ")[2], 10) +1
+        })
+    })
+      .then(resp => resp.json())
+      .then(data =>{
+          const p = document.getElementById(data.id).nextSibling
+          p.textContent = `  ${data.likes} likes!`
+      })}
