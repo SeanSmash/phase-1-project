@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <head>
     <title>Our Family Recipes</title>
+    <script src = 'js/index.js'></script>
 </head>
-<body>
+<header>
     <h1>Our Family Recipes</h1>
-</body>
+</header>
+<main>
+    <section>
+        <form>
+            <label for="recipe-title">Recipe Title</label>
+            <input type="text" id="recipe-title" name="recipe-title" placeholder="Recipe Title" required="required"/>
+            <label for="chef">by Chef</label>
+            <input type="text" id="chef" name="chef" placeholder="Enter Chef">
+            <lable for="family-story">Family Story</lable>
+            <input type="textarea" id="family-story" name="family-story" placeholder="Family Story / Description">
+            <label for="ingredients">Ingredients</label>
+            <input type="text" id="ingredients" name="ingredients" placeholder="Enter Ingredients" required="required"/>
+            <label for="instructions">Instructions</label>
+            <input type="textarea" id="instructions" name="instructions" placeholder="Enter Instructions"/>
+            <label for="contributors">Inspired by / Contributors</label>
+            <input type="text" id="contributors" name="contributors" placeholder="Inspired by / Contributors">
+            <input type="checkbox" id="checkbox"/>
+            <input type="submit" value="Submit"/>
+          </form>
+    </section>
+</main>
 </html>
