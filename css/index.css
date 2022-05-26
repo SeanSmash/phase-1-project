@@ -1,0 +1,21 @@
+body {
+    margin: 20;
+    font-family: monospace;
+}
+
+.recipe-card {
+    text-align: left;
+    border: grey solid 2px;
+    padding: 1rem;
+    width: 30rem;
+    margin: 1rem 5rem;
+    box-shadow: 3px 4px #008B8B
+}
+
+.container {
+    text-align: left;
+    border: grey solid 1px;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #6495ED
+}

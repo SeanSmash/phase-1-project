@@ -76,6 +76,7 @@ function postRecipe(e){
 
 function renderRecipe(recipe){
     const div = document.createElement('div')
+    div.className = 'recipe-card'
     const h2 = document.createElement('h2')
     h2.className = 'title'
     h2.textContent = `Recipe Title: ${recipe.recipeTitle}`
