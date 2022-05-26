@@ -45,6 +45,7 @@ formSubmit.addEventListener('submit', e => postRecipe(e))
 
 function postRecipe(e){
     e.preventDefault()
+    console.log(e)
     const recipeTitle = e.target[0].value
     const chef = e.target[1].value
     const familyStory = e.target[2].value
