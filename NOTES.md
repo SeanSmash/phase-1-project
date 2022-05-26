@@ -23,6 +23,7 @@
 - Search through recipes (submit)
 - Button to like recipes (click)
 - Comment on recipes (submit)
+- Add picture to recipe
 
 ### Recipes
 - Slow Cooker Pulled Pork

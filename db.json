@@ -1,40 +1,22 @@
 {
   "Recipes": [
     {
-      "title": "pulled pork",
+      "recipeTitle": "red curry",
       "chef": "sean",
-      "familyStory": "lots of memories",
-      "ingredients": "pork butt",
-      "instructions": "smoke pork butt",
-      "inspiredBy": "Aaron Franklin",
+      "familyStory": "yummy times",
+      "ingredients": "chicken, curry, basil",
+      "instructions": "slice chicken. sautee. serve.",
+      "inspiredBy": "Gordon Ramsay",
       "id": 1
     },
     {
-      "recipeTitle": "red curry",
-      "chef": "sean",
-      "familyStory": "yummy times",
-      "ingredients": "chicken, curry, basil",
-      "instructions": "slice chicken. sautee. serve.",
-      "inspiredBy": "Gordon Ramsay",
+      "recipeTitle": "Pulled Pork",
+      "chef": "Sean",
+      "familyStory": "great memories",
+      "ingredients": "pork butt",
+      "instructions": "smoke pork butt. shred. serve",
+      "inspiredBy": "Aaron Franklin",
       "id": 2
-    },
-    {
-      "recipeTitle": "red curry",
-      "chef": "",
-      "familyStory": "",
-      "ingredients": "chicken, curry, basil",
-      "instructions": "slice chicken. sautee. serve.",
-      "inspiredBy": "",
-      "id": 3
-    },
-    {
-      "recipeTitle": "red curry",
-      "chef": "sean",
-      "familyStory": "yummy times",
-      "ingredients": "chicken, curry, basil",
-      "instructions": "slice chicken. sautee. serve.",
-      "inspiredBy": "Gordon Ramsay",
-      "id": 4
     }
   ]
 }

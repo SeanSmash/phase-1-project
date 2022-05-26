@@ -9,6 +9,19 @@ class Recipe{
     }
 }
 
+document.addEventListener('DOMContentLoaded', function (){
+    fetch('http://localhost:3000/Recipes')
+    .then(resp => resp.json())
+    .then(data => renderAllRecipes(data))
+
+})
+
+const renderAllRecipes = recipes => {
+    recipes.forEach(recipe => {
+        renderRecipe(recipe)
+    })
+}
+
 const formSubmit = document.querySelector('form')
 formSubmit.addEventListener('submit', e => postRecipe(e))
 
