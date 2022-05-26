@@ -1,5 +1,5 @@
 class Recipe{
-    constructor(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category){
+    constructor(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category, likes){
         this.recipeTitle = recipeTitle,
         this.chef = chef
         this.familyStory = familyStory
@@ -7,6 +7,7 @@ class Recipe{
         this.instructions = instructions
         this.inspiredBy = inspiredBy
         this.category = category
+        this.likes = likes
     }
 }
 
@@ -52,7 +53,8 @@ function postRecipe(e){
     const instructions = e.target[4].value
     const inspiredBy = e.target[5].value
     const category = e.target[6].value
-    const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category)
+    const likes = 0
+    const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category, likes)
     formSubmit.reset()
     clearRecipes()
     fetch('http://localhost:3000/Recipes', {
@@ -70,24 +72,30 @@ function postRecipe(e){
 function renderRecipe(recipe){
     const div = document.createElement('div')
     const h2 = document.createElement('h2')
-    const h3 = document.createElement('h3')
-    const asideStory = document.createElement('aside')
-    const pIngredients = document.createElement('p')
-    const pInstructions = document.createElement('p')
-    const inspirations = document.createElement('p')
     h2.className = 'title'
     h2.textContent = `Recipe Title: ${recipe.recipeTitle}`
+    const h3 = document.createElement('h3')
     h3.className = 'chef'
     h3.textContent = `by Chef ${recipe.chef}`
+    const asideStory = document.createElement('aside')
     asideStory.className = 'family-story'
     asideStory.textContent = `Family Story: ${recipe.familyStory}`
+    const pIngredients = document.createElement('p')
     pIngredients.className = 'ingredients'
     pIngredients.textContent = `Ingredients: ${recipe.ingredients}`
+    const pInstructions = document.createElement('p')
     pInstructions.className = 'instructions'
     pInstructions.textContent = `Instructions: ${recipe.instructions}`
+    const inspirations = document.createElement('p')
     inspirations.className = 'inspirations'
     inspirations.textContent = `Inspired by / Contributors: ${recipe.inspiredBy}`
-    div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations)
+    const pLikes = document.createElement('span')
+    pLikes.textContent = `  ${recipe.likes} likes!`
+    const likeBtn = document.createElement('button')
+    likeBtn.id = recipe.id
+    likeBtn.className = 'like-btn'
+    likeBtn.innerHTML = `Like &#10084`
+    div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
     recipeSection.append(div)
 }
 
