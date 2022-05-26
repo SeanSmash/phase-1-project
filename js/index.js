@@ -1,11 +1,12 @@
 class Recipe{
-    constructor(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy){
+    constructor(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category){
         this.recipeTitle = recipeTitle,
         this.chef = chef
         this.familyStory = familyStory
         this.ingredients = ingredients,
         this.instructions = instructions
         this.inspiredBy = inspiredBy
+        this.category = category
     }
 }
 
@@ -45,14 +46,14 @@ formSubmit.addEventListener('submit', e => postRecipe(e))
 
 function postRecipe(e){
     e.preventDefault()
-    console.log(e)
     const recipeTitle = e.target[0].value
     const chef = e.target[1].value
     const familyStory = e.target[2].value
     const ingredients = e.target[3].value
     const instructions = e.target[4].value
     const inspiredBy = e.target[5].value
-    const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy)
+    const category = e.target[6].value
+    const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category)
     formSubmit.reset()
     fetch('http://localhost:3000/Recipes', {
         method: 'POST',
