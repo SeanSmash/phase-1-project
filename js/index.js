@@ -93,7 +93,18 @@ function renderRecipe(recipe){
 
 const filterRecipesByCategory = e => {
     e.preventDefault()
-    console.log(e.target[0].value)
+    const category = e.target[0].value
+    clearRecipes()
+    filterByCategoryBtn.reset()
+    fetch('http://localhost:3000/Recipes')
+    .then(resp => resp.json())
+    .then(data => {
+            data.map(recipe => {
+            if(recipe.category === category){
+                renderRecipe(recipe)
+            }
+        })
+    })
 }
 
 const clearRecipes = () => {
