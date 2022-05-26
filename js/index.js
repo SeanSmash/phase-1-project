@@ -55,6 +55,9 @@ function postRecipe(e){
     const category = e.target[6].value
     const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category)
     formSubmit.reset()
+    while(recipeSection.firstChild){
+        recipeSection.removeChild(recipeSection.firstChild)
+    }
     fetch('http://localhost:3000/Recipes', {
         method: 'POST',
         headers:{
