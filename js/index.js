@@ -1,19 +1,13 @@
 class Recipe{
-    constructor(title, chef, familyStory, ingredients, instructions, inspiredBy){
-        this.title = title,
+    constructor(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy){
+        this.recipeTitle = recipeTitle,
         this.chef = chef
         this.familyStory = familyStory
         this.ingredients = ingredients,
         this.instructions = instructions
         this.inspiredBy = inspiredBy
-        //console.log(this)
     }
 }
-
-// document.addEventListener("DOMContentLoaded", e => {
-//     const h1 = document.querySelector('h1')
-//     console.log(h1.textContent)
-// })
 
 const formSubmit = document.querySelector('form')
 formSubmit.addEventListener('submit', e => postRecipe(e))
@@ -27,16 +21,40 @@ function postRecipe(e){
     const instructions = e.target[4].value
     const inspiredBy = e.target[5].value
     const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy)
-    console.log(newRecipe)
+    formSubmit.reset()
     fetch('http://localhost:3000/Recipes', {
         method: 'POST',
         headers:{
             'Content-type': 'application/json',
             'Accept': 'application/json'
         },
-        body: JSON.stringify(newRecipe)
+        body: JSON.stringify(newRecipe),
     })
-    .then(resp => resp.json)
-    .then(data => console.log(data))
-    formSubmit.reset()
+    .then(resp => resp.json())
+    .then(data => renderRecipe(data))
+}
+
+function renderRecipe(recipe){
+    const recipeSection = document.getElementById('recipe')
+    const div = document.createElement('div')
+    const h2 = document.createElement('h2')
+    const h3 = document.createElement('h3')
+    const asideStory = document.createElement('aside')
+    const pIngredients = document.createElement('p')
+    const pInstructions = document.createElement('p')
+    const inspirations = document.createElement('h3')
+    h2.className = 'title'
+    h2.textContent = recipe.recipeTitle
+    h3.className = 'chef'
+    h3.textContent = recipe.chef
+    asideStory.className = 'family-story'
+    asideStory.textContent = recipe.familyStory
+    pIngredients.className = 'ingredients'
+    pIngredients.textContent = recipe.ingredients
+    pInstructions.className = 'instructions'
+    pInstructions.textContent = recipe.instructions
+    inspirations.className = 'inspirations'
+    inspirations.textContent = recipe.inspiredBy
+    div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations)
+    recipeSection.append(div)
 }
