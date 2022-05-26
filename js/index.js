@@ -25,24 +25,23 @@ const renderAllRecipes = recipes => {
 const allRecipesBtn = document.querySelector('#all-recipes')
 const clearRecipesBtn = document.querySelector('#clear-recipes')
 const formSubmit = document.querySelector('form')
+const filterByCategoryBtn = document.querySelector('#category-filter')
 const recipeSection = document.getElementById('recipe')
 
 allRecipesBtn.addEventListener('click', e => {
-    while(recipeSection.firstChild){
-        recipeSection.removeChild(recipeSection.firstChild)
-    }
+    clearRecipes()
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
     .then(data => renderAllRecipes(data))
 })
 
 clearRecipesBtn.addEventListener('click', e => {
-    while(recipeSection.firstChild){
-        recipeSection.removeChild(recipeSection.firstChild)
-    }
+    clearRecipes()
 })
 
 formSubmit.addEventListener('submit', e => postRecipe(e))
+
+filterByCategoryBtn.addEventListener('submit', e => filterRecipesByCategory(e))
 
 function postRecipe(e){
     e.preventDefault()
@@ -55,9 +54,7 @@ function postRecipe(e){
     const category = e.target[6].value
     const newRecipe = new Recipe(recipeTitle, chef, familyStory, ingredients, instructions, inspiredBy, category)
     formSubmit.reset()
-    while(recipeSection.firstChild){
-        recipeSection.removeChild(recipeSection.firstChild)
-    }
+    clearRecipes()
     fetch('http://localhost:3000/Recipes', {
         method: 'POST',
         headers:{
@@ -92,4 +89,15 @@ function renderRecipe(recipe){
     inspirations.textContent = `Inspired by / Contributors: ${recipe.inspiredBy}`
     div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations)
     recipeSection.append(div)
+}
+
+const filterRecipesByCategory = e => {
+    e.preventDefault()
+    console.log(e.target[0].value)
+}
+
+const clearRecipes = () => {
+    while(recipeSection.firstChild){
+        recipeSection.removeChild(recipeSection.firstChild)
+    }
 }

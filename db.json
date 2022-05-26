@@ -18,6 +18,16 @@
       "inspiredBy": "Aaron Franklin",
       "category": "main",
       "id": 2
+    },
+    {
+      "recipeTitle": "1",
+      "chef": "2",
+      "familyStory": "3",
+      "ingredients": "4",
+      "instructions": "5",
+      "inspiredBy": "6",
+      "category": "starter",
+      "id": 3
     }
   ]
 }
