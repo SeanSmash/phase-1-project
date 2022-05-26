@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function (){
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
     .then(data => renderAllRecipes(data))
-
 })
 
 const renderAllRecipes = recipes => {
@@ -22,7 +21,26 @@ const renderAllRecipes = recipes => {
     })
 }
 
+const allRecipesBtn = document.querySelector('#all-recipes')
+const clearRecipesBtn = document.querySelector('#clear-recipes')
 const formSubmit = document.querySelector('form')
+const recipeSection = document.getElementById('recipe')
+
+allRecipesBtn.addEventListener('click', e => {
+    while(recipeSection.firstChild){
+        recipeSection.removeChild(recipeSection.firstChild)
+    }
+    fetch('http://localhost:3000/Recipes')
+    .then(resp => resp.json())
+    .then(data => renderAllRecipes(data))
+})
+
+clearRecipesBtn.addEventListener('click', e => {
+    while(recipeSection.firstChild){
+        recipeSection.removeChild(recipeSection.firstChild)
+    }
+})
+
 formSubmit.addEventListener('submit', e => postRecipe(e))
 
 function postRecipe(e){
@@ -48,7 +66,6 @@ function postRecipe(e){
 }
 
 function renderRecipe(recipe){
-    const recipeSection = document.getElementById('recipe')
     const div = document.createElement('div')
     const h2 = document.createElement('h2')
     const h3 = document.createElement('h3')
