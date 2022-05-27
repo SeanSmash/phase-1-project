@@ -92,6 +92,10 @@ function recipeCard(recipe){
     const h3 = document.createElement('h3')
     h3.className = 'chef'
     h3.textContent = `by: Chef ${recipe.chef}`
+    const likeBtn = document.createElement('button')
+    likeBtn.id = recipe.id
+    likeBtn.className = 'like-btn'
+    likeBtn.innerHTML = `Like <span style= "font-size:125%; color:#B22222">&hearts;</span>`
     const pStory = document.createElement('p')
     pStory.className = 'family-story'
     pStory.textContent = `Family Story: ${recipe.familyStory}`
@@ -107,11 +111,11 @@ function recipeCard(recipe){
     const pLikes = document.createElement('span')
     pLikes.id = recipe.id
     pLikes.textContent = `  ${recipe.likes} likes!`
-    const likeBtn = document.createElement('button')
-    likeBtn.id = recipe.id
-    likeBtn.className = 'like-btn'
-    likeBtn.innerHTML = `Like <span style= "font-size:125%; color:#B22222">&hearts;</span>`
-    div.append(h2, h3, pStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
+    const deleteBtn = document.createElement('button')
+    deleteBtn.id = 'recipe-delete'
+    deleteBtn.style = 'text-align:center'
+    deleteBtn.textContent = 'Delete'
+    div.append(h2, h3, likeBtn, pLikes, pStory, pIngredients, pInstructions, inspirations, deleteBtn)
     recipeSection.append(div)
 }
 
@@ -142,7 +146,7 @@ const clearRecipes = () => {
     while(recipeSection.firstChild){
         recipeSection.removeChild(recipeSection.firstChild)
     }
-    visibleRecipes.textContent = `0 Recipes`
+    visibleRecipes.textContent = '...'
 }
 
 const updateLikes = e => {
