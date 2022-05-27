@@ -92,9 +92,9 @@ function recipeCard(recipe){
     const h3 = document.createElement('h3')
     h3.className = 'chef'
     h3.textContent = `by: Chef ${recipe.chef}`
-    const asideStory = document.createElement('aside')
-    asideStory.className = 'family-story'
-    asideStory.textContent = `Family Story: ${recipe.familyStory}`
+    const pStory = document.createElement('p')
+    pStory.className = 'family-story'
+    pStory.textContent = `Family Story: ${recipe.familyStory}`
     const pIngredients = document.createElement('p')
     pIngredients.className = 'ingredients'
     pIngredients.textContent = `Ingredients: ${recipe.ingredients}`
@@ -111,7 +111,7 @@ function recipeCard(recipe){
     likeBtn.id = recipe.id
     likeBtn.className = 'like-btn'
     likeBtn.innerHTML = `Like <span style= "font-size:125%; color:#B22222">&hearts;</span>`
-    div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
+    div.append(h2, h3, pStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
     recipeSection.append(div)
 }
 
@@ -135,8 +135,6 @@ const filterRecipesByCategory = e => {
 }
 
 const countVisibleRecipes = (recipeArray) => {
-    console.log(recipeArray)
-    console.log(recipeArray.length)
     visibleRecipes.textContent = `${recipeArray.length} Recipes`
 }
 
