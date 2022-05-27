@@ -1,7 +1,8 @@
 #title {
     text-align: center;
-    font-family: 'Verdana';
-    font-size: 30pt;
+    font-family: Garamond;
+    font-style: italic;
+    font-size: 40pt;
 }
 
 nav {
@@ -15,12 +16,17 @@ nav {
 }
 
 .form-container {
-    text-align: left;
+    text-align: center;
     border: grey solid 1px;
     padding: .1rem 1rem 1rem 1rem;
     margin: 1rem 2rem;
     background-color: whitesmoke;
     box-shadow: 3px 4px #6495ED
+}
+
+textarea {
+    height:5rem;
+    width: 30%;
 }
 
 #filter-container {
@@ -29,7 +35,7 @@ nav {
 
 body {
     margin: 20;
-    font-family: monospace;
+    font-family: Arial;
     background-color: wheat;
 }
 
