@@ -162,5 +162,3 @@ const updateLikes = e => {
           const p = document.getElementById(data.id).nextSibling
           p.textContent = `  ${data.likes} likes!`
       })}
-
-console.log(document.getElementsByClassName('form-textarea'))
