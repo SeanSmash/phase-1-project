@@ -102,7 +102,7 @@ function renderRecipe(recipe){
     const likeBtn = document.createElement('button')
     likeBtn.id = recipe.id
     likeBtn.className = 'like-btn'
-    likeBtn.innerHTML = `Like &#128420`
+    likeBtn.innerHTML = `Like <span style= "font-size:125%; color:#B22222">&hearts;</span>`
     div.append(h2, h3, asideStory, pIngredients, pInstructions, inspirations, likeBtn, pLikes)
     recipeSection.append(div)
 }

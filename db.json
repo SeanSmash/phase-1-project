@@ -9,7 +9,7 @@
       "inspiredBy": "",
       "category": "main",
       "id": 1,
-      "likes": 2
+      "likes": 8
     },
     {
       "recipeTitle": "Risotto - Bianco",
@@ -17,9 +17,9 @@
       "familyStory": "My Aunt Pat used to make a red sauce risotto that I always loved as a kid.  But I never really made it for myself.  Then, in 2018 of 2019, I felt like some risotto.  I Googled around and came across Chef Jaime Oliver's Risotto Blanco recipe.  It has been a hit and a treat ever since.  I don't know that I'll ever go back to a red sauce risotto.",
       "ingredients": "2c Arborrio rice (short grain Italian rice), 1 knob butter (an English term I can never remember, just use 4tbsp), 1 yellow onion diced, 3 cloves garlic minced, 3 sticks celery finely chopped, 1 1/2c dry white wine, 5c chicken stock, 1c frozen peas, 2c grated parmesan, salt, pepper",
       "instructions": "In a medium sauce pan heat chicken stock.  In a large pot, melt butter, lightly sautee onion, garlic, celery into a soffrito.  Turn up heat to medium high, add rice and stir 2 mins.  Add wine, let it absorb.  Slowly add c hicken stock one ladle at a time and let it absord, stirring frequently.  Add peas.  Taste for doneness.  Add cheese.  Add salt and pepper to taste.",
-      "inspiredBy": "Chef Jaime Oliver",
+      "inspiredBy": "Chef Jamie Oliver",
       "category": "side",
-      "likes": 8,
+      "likes": 11,
       "id": 2
     },
     {
@@ -30,7 +30,7 @@
       "instructions": "Salt meat, set out to room temperature.  Sear meat on all sides, set aside.  Heat oil, fry onions, garlic, bell pepper.  Deglaze with wine.  Combine rest of ingredients except olives and simmer to incorporate.  Add everything to slow cooker and cook on medium for 8 hours.  Add olives.  Serve over rice.",
       "inspiredBy": "",
       "category": "main",
-      "likes": 0,
+      "likes": 5,
       "id": 3
     },
     {
@@ -41,19 +41,19 @@
       "instructions": "Melt 3tbsp butter in a sauce pan, sautee garlic.  Add cream, salt and pepper to taste, bring to a boil, simmer 3-5 mins to reduce (should coat the back of a wooden spoon).  Remove from heat, add parmesan and romano.  In small pan, heat 1tbsp butter, add flour to make a roux.  Add to sauce, put sauce over low heat to incorporate and thicken.  Season to taste.  Add to cooked pasta.  Serve.",
       "inspiredBy": "",
       "category": "side",
-      "likes": 0,
+      "likes": 3,
       "id": 4
     },
     {
-        "recipeTitle": "Thai Red Curry (Pork, Chicken, Beef)",
-        "chef": "Sean",
-        "familyStory": "We first saw this recipe in 2021.  Chef Gordon Ramsay was posting ten-minute cooking clips on YouTube.  One of them was chicken curry.  We tried it and liked it so much it ended up in the regualar rotation.  I've adapted the ingredients and instructions from various other Thai curry recipes, but I tried to keep it as simple as Chef Ramsay made it.",
-        "ingredients": "2lbs pork/chicken/beef, 1 yellow onion diced, 3 cloves garlic minced, 1 can coconut milk, 2tbs red curry paste, 1 can diced tomatos, 1 can tomato paste, 1/4c fresh basil chopped, 1/4c fresh cilantro chopped, olive oil, salt, pepper",
-        "instructions": "Cut meat into thin strips; brown in pan with oil, drain, set aside.  In a separate pot, heat oil and brown onion and garlic; add the rest of the ingredients, simmer, adjust to taste.  Add back meat and simmer 10 mins.  Season to taste.  Serve.",
-        "inspiredBy": "Chef Gordon Ramsay",
-        "category": "main",
-        "likes": 0,
-        "id": 5
-      }
+      "recipeTitle": "Thai Red Curry (Pork, Chicken, Beef)",
+      "chef": "Sean",
+      "familyStory": "We first saw this recipe in 2021.  Chef Gordon Ramsay was posting ten-minute cooking clips on YouTube.  One of them was chicken curry.  We tried it and liked it so much it ended up in the regualar rotation.  I've adapted the ingredients and instructions from various other Thai curry recipes, but I tried to keep it as simple as Chef Ramsay made it.",
+      "ingredients": "2lbs pork/chicken/beef, 1 yellow onion diced, 3 cloves garlic minced, 1 can coconut milk, 2tbs red curry paste, 1 can diced tomatos, 1 can tomato paste, 1/4c fresh basil chopped, 1/4c fresh cilantro chopped, olive oil, salt, pepper",
+      "instructions": "Cut meat into thin strips; brown in pan with oil, drain, set aside.  In a separate pot, heat oil and brown onion and garlic; add the rest of the ingredients, simmer, adjust to taste.  Add back meat and simmer 10 mins.  Season to taste.  Serve.",
+      "inspiredBy": "Chef Gordon Ramsay",
+      "category": "main",
+      "likes": 1,
+      "id": 5
+    }
   ]
 }

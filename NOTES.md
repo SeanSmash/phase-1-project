@@ -14,22 +14,21 @@
 - Search through recipes (submit)
 
 ### Step 4: Come up with an MVP
-- Form to submit recipes (submit)
-- List all recipes (DOMContentLoaded)
+- List all recipes (DOMContentLoaded) DONE
+- Form to submit recipes (submit) DONE
 - Delete recipes (click)
 
 ### Step 5: List out stretch goals
 - Edit recipes (submit)
+- Filter recipes by category (submit) DONE
 - Search through recipes (submit)
-- Button to like recipes (click)
+- Button to like recipes (click) DONE
 - Comment on recipes (submit)
 - Add picture to recipe
+- Count of recipes currently being displayed
 
 ### Recipes
 - Slow Cooker Pulled Pork
-- Ropa Vieja
-- Red Curry
-- Pot Roast
 - Roasted Broccoli
 - Parsnip Puree
 - Peas and Carrots
@@ -39,8 +38,6 @@
 - Cocoa Whipped Cream
 - Roasted Brussels Sprouts
 - Grilled Asparagus
-- Fettucini Alfredo
-- Risotto
 - Peanutbutter cups
 - Cream brulee
 
