@@ -35,6 +35,7 @@ const allRecipesBtn = document.querySelector('#all-recipes')
 const clearRecipesBtn = document.querySelector('#clear-recipes')
 const formSubmit = document.querySelector('form')
 const filterByCategoryBtn = document.querySelector('#category-filter')
+const visibleRecipes = document.querySelector('#visible-recipes')
 const visibleRecipeCount = []
 const recipeSection = document.getElementById('recipe')
 
@@ -129,19 +130,21 @@ const filterRecipesByCategory = e => {
                 newArray.push(recipe)
             }
         })
-        console.log(newArray)
+        visibleRecipes.textContent = `${newArray.length} Recipes`
     })
 }
 
 const countVisibleRecipes = (recipeArray) => {
     console.log(recipeArray)
     console.log(recipeArray.length)
+    visibleRecipes.textContent = `${recipeArray.length} Recipes`
 }
 
 const clearRecipes = () => {
     while(recipeSection.firstChild){
         recipeSection.removeChild(recipeSection.firstChild)
     }
+    visibleRecipes.textContent = `0 Recipes`
 }
 
 const updateLikes = e => {
