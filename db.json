@@ -9,7 +9,7 @@
       "inspiredBy": "",
       "category": "main",
       "id": 1,
-      "likes": 15
+      "likes": 16
     },
     {
       "recipeTitle": "Risotto - Bianco",
@@ -56,26 +56,15 @@
       "id": 5
     },
     {
-      "recipeTitle": "1",
-      "chef": "2",
-      "familyStory": "3Family Story... / Description...",
-      "ingredients": "4Ingredients...",
-      "instructions": "5Instructions...",
-      "inspiredBy": "6",
+      "recipeTitle": "6",
+      "chef": "6",
+      "familyStory": "6Family Story... / Description...",
+      "ingredients": "6Ingredients...",
+      "instructions": "6Instructions...",
+      "inspiredBy": "6y",
       "category": "please-select",
-      "likes": 4,
+      "likes": 0,
       "id": 6
-    },
-    {
-      "recipeTitle": "65",
-      "chef": "4",
-      "familyStory": "Family Story... / Description...3",
-      "ingredients": "Ingredients...2",
-      "instructions": "Instructions...1",
-      "inspiredBy": "1",
-      "category": "please-select",
-      "likes": 4,
-      "id": 7
     }
   ]
 }

@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function (){
             updateLikes(e)
         }
     })
+    document.addEventListener('click', e =>{
+        if(e.target.matches('.recipe-delete')){
+            recipeDelete(e)
+        }
+    })
 })
 
 const renderAllRecipes = recipes => {
@@ -36,7 +41,7 @@ const clearRecipesBtn = document.querySelector('#clear-recipes')
 const formSubmit = document.querySelector('form')
 const filterByCategoryBtn = document.querySelector('#category-filter')
 const visibleRecipes = document.querySelector('#visible-recipes')
-const visibleRecipeCount = []
+const recipeDeleteBtn = document.querySelector('#recipe-delete')
 const recipeSection = document.getElementById('recipe')
 
 allRecipesBtn.addEventListener('click', e => {
@@ -112,7 +117,8 @@ function recipeCard(recipe){
     pLikes.id = recipe.id
     pLikes.textContent = `  ${recipe.likes} likes!`
     const deleteBtn = document.createElement('button')
-    deleteBtn.id = 'recipe-delete'
+    deleteBtn.id = recipe.id
+    deleteBtn.className = 'recipe-delete'
     deleteBtn.style = 'text-align:center'
     deleteBtn.textContent = 'Delete'
     div.append(h2, h3, likeBtn, pLikes, pStory, pIngredients, pInstructions, inspirations, deleteBtn)
@@ -151,7 +157,6 @@ const clearRecipes = () => {
 
 const updateLikes = e => {
     e.preventDefault()
-    console.log(e.target.parentElement.children[3])
     fetch(`http://localhost:3000/Recipes/${e.target.id}`, {
         method: 'PATCH',
         headers: {
@@ -166,4 +171,22 @@ const updateLikes = e => {
       .then(data =>{
           const p = document.getElementById(data.id).nextSibling
           p.textContent = `  ${data.likes} likes!`
-      })}
+      })
+}
+
+const recipeDelete = e => {
+    fetch(`http://localhost:3000/Recipes/${e.target.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-type': 'application/json',
+          'Accept': 'application/json',
+        }
+    })
+    fetch('http://localhost:3000/Recipes')
+    .then(resp => resp.json())
+    .then(data => {
+        clearRecipes()
+        countVisibleRecipes(data)
+        renderAllRecipes(data)
+    })
+}
