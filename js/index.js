@@ -14,7 +14,10 @@ class Recipe{
 document.addEventListener('DOMContentLoaded', function (){
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
-    .then(data => renderAllRecipes(data))
+    .then(data => {
+        countVisibleRecipes(data)
+        renderAllRecipes(data)
+    })
     document.addEventListener('click', e =>{
         if(e.target.matches('.like-btn')){
             updateLikes(e)
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
 const renderAllRecipes = recipes => {
     recipes.forEach(recipe => {
-        renderRecipe(recipe)
+        recipeCard(recipe)
     })
 }
 
@@ -32,13 +35,17 @@ const allRecipesBtn = document.querySelector('#all-recipes')
 const clearRecipesBtn = document.querySelector('#clear-recipes')
 const formSubmit = document.querySelector('form')
 const filterByCategoryBtn = document.querySelector('#category-filter')
+const visibleRecipeCount = []
 const recipeSection = document.getElementById('recipe')
 
 allRecipesBtn.addEventListener('click', e => {
     clearRecipes()
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
-    .then(data => renderAllRecipes(data))
+    .then(data => {
+        countVisibleRecipes(data)
+        renderAllRecipes(data)
+    })
 })
 
 clearRecipesBtn.addEventListener('click', e => {
@@ -71,10 +78,10 @@ function postRecipe(e){
         body: JSON.stringify(newRecipe),
     })
     .then(resp => resp.json())
-    .then(data => renderRecipe(data))
+    .then(data => recipeCard(data))
 }
 
-function renderRecipe(recipe){
+function recipeCard(recipe){
     const div = document.createElement('div')
     div.className = 'recipe-card'
     const h2 = document.createElement('h2')
@@ -115,12 +122,20 @@ const filterRecipesByCategory = e => {
     fetch('http://localhost:3000/Recipes')
     .then(resp => resp.json())
     .then(data => {
-            data.map(recipe => {
+        const newArray = []
+        data.map(recipe => {
             if(recipe.category === category){
-                renderRecipe(recipe)
+                recipeCard(recipe)
+                newArray.push(recipe)
             }
         })
+        console.log(newArray)
     })
+}
+
+const countVisibleRecipes = (recipeArray) => {
+    console.log(recipeArray)
+    console.log(recipeArray.length)
 }
 
 const clearRecipes = () => {

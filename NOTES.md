@@ -48,3 +48,4 @@
 - probably better and more sophisticated ways, but for newbies, it's great
 - grabbing wrong element for likes (button vs p)
 - easier to check often after little changes than wait until you have a long block of code to figure out you're not returning what you need
+- is there a better way to count what's on the page?
