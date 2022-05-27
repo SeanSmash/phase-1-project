@@ -151,6 +151,7 @@ const clearRecipes = () => {
 
 const updateLikes = e => {
     e.preventDefault()
+    console.log(e.target.parentElement.children[3])
     fetch(`http://localhost:3000/Recipes/${e.target.id}`, {
         method: 'PATCH',
         headers: {
@@ -158,7 +159,7 @@ const updateLikes = e => {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          'likes': parseInt(e.target.parentElement.children[7].textContent.split(" ")[2], 10) +1
+          'likes': parseInt(e.target.parentElement.children[3].textContent.split(" ")[2], 10) +1
         })
     })
       .then(resp => resp.json())
