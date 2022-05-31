@@ -26,6 +26,7 @@
 - Comment on recipes (submit)
 - Add picture to recipe
 - Count of recipes currently being displayed
+- Add Family field
 
 ### Recipes
 - Slow Cooker Pulled Pork

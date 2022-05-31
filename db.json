@@ -56,17 +56,6 @@
       "id": 5
     },
     {
-      "recipeTitle": "6",
-      "chef": "6",
-      "familyStory": "6Family Story... / Description...",
-      "ingredients": "6Ingredients...",
-      "instructions": "6Instructions...",
-      "inspiredBy": "6y",
-      "category": "please-select",
-      "likes": 0,
-      "id": 6
-    },
-    {
       "recipeTitle": "Cocoa Whipped Cream",
       "chef": "Sean",
       "familyStory": "We were looking for less sugary and a little \"healthier\" dessert.  We had some good cocoa powder and I decided to make some fresh whipped cream and add the cocoa.  It was a hit, and not a lot of added sugar.",
@@ -74,8 +63,30 @@
       "instructions": "Put the cream and sugar in a mixing bowl or Kitchen Aide and mix with a whisk on medium until the cream thickens.  Add the cocoa to taste.  You can go as heavy or as light as you like.",
       "inspiredBy": "",
       "category": "dessert",
-      "likes": 0,
+      "likes": 1,
       "id": 7
+    },
+    {
+      "recipeTitle": "Parsnip Puree",
+      "chef": "Sean",
+      "familyStory": "We started watching cooking Master Classes and loved Chef Thomas Keller.  One of the first recipes we tried and loved was the pureed parsnips.  These are so delicious and creamy.",
+      "ingredients": "1 bag (5-8) parsnips, 2 cups heavy cream, 2 tbsp butter, salt",
+      "instructions": "Peel and dice the parsnips, add to a medium saucepan over medium heat; add cream to cover; simmer for 20 mins until no resistance in parsnips; add mixture to food processor and blend, slowly adding butter and salt to taste; serve.",
+      "inspiredBy": "Chef Thomas Keller",
+      "category": "side",
+      "likes": 0,
+      "id": 8
+    },
+    {
+      "recipeTitle": "1",
+      "chef": "1",
+      "familyStory": "Family Story... / Description...1",
+      "ingredients": "Ingredients...1",
+      "instructions": "Instructions...1",
+      "inspiredBy": "1",
+      "category": "main",
+      "likes": 3,
+      "id": 9
     }
   ]
 }
