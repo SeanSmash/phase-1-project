@@ -87,6 +87,39 @@
       "category": "main",
       "likes": 3,
       "id": 9
+    },
+    {
+      "recipeTitle": "Roasted Brussels Sprouts",
+      "chef": "Sean",
+      "familyStory": "I adapted this recipe over the years and this is its current form.  This goes great with chicken.  We love these, but the kids don't seem to like them, yet.",
+      "ingredients": "1 bag Brussels Sprouts, 2 cloves garlic, 2 slices thick cut bacon, parmesan cheese, olive oil, balsamic vinegar, salt",
+      "instructions": "Heat oven to 400 degrees; heat large cast iron pan over low heat; stem and half Brussels Sprouts add to pan and toss with olive oil; add diced bacon; add chopped garlic; roast in oven for 30 mins; drizzle with balsamic vinegar, add salt, add grated parmesan; serve",
+      "inspiredBy": "",
+      "category": "side",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "recipeTitle": "Roasted Broccoli",
+      "chef": "Sean",
+      "familyStory": "This is a dinner staple for us.  We probably eat this dish fives times per week.  We never get sick of it, and it's really good for you.  For best results, you really need to know your oven and find that sweet heat and time spot where the broccoli is cooked to your liking with the right amount of charring.",
+      "ingredients": "Broccoli, 1 clove garlic, olive oil, lemon, salt",
+      "instructions": "Heat oven to 400 degrees; remove stems from broccoli and cut florets into bit sized pieces; add to roasting pan and toss with olive oil to coat; add chopped garlic; roast 20 mins; broil 3 mins (for a little char); add fresh lemon juice and salt; serve.",
+      "inspiredBy": "",
+      "category": "side",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "recipeTitle": "Peanut Butter Cups",
+      "chef": "Sean",
+      "familyStory": "I am not a chocolatier, but it is satisfying to make your own peanut butter cups.  My Uncle Claude would always turn his nose up at Reese's cups and say they tasted like dirt.  And if you ever get really good peanut butter cups like those we used to get from the Dunmore Candy Kitchen, you'd agree.  Quality and chocolate and quality peanut butter make these good.  But this is a fast method and real candy making is much more involved.  ",
+      "ingredients": "baking chocolate, peanuts, sugar, salt, candy cups",
+      "instructions": "Melt chocolate in a double boiler; add peanuts to a food processor and process into butter adding sugar and salt to taste; half fill a candy cup with chocolate, add dollop of peanut butter, fill the rest with chocolate; put chocolates in the refrigerator to harden",
+      "inspiredBy": "Uncle Claude",
+      "category": "dessert",
+      "likes": 0,
+      "id": 12
     }
   ]
 }
