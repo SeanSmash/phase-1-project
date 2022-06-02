@@ -120,6 +120,28 @@
       "category": "dessert",
       "likes": 0,
       "id": 12
+    },
+    {
+      "recipeTitle": "Slow Cooker Pulled Pork",
+      "chef": "Sean",
+      "familyStory": "We love pulled pork.  It's cheap, it goes with everything, and it's delicious.  Plus, this recipe is very easy.",
+      "ingredients": "3 lbs pork Boston butt, or something similar with good fat content, 5 cloves garlic, chicken broth, salt, pepper, paprika",
+      "instructions": "Salt pork and sear all sides in a cast iron pan; add to slow cooker; deglaze pan with broth and add to slow cooker; add salt, pepper, and paprika to pork; add garlic cloves, add 1 cup of broth; cook on high 2 hours, medium 2 hours, and low 4 hours; remove and let rest; shred with a fork; add salt and juice to taste; serve with bbq sauce",
+      "inspiredBy": "",
+      "category": "main",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "recipeTitle": "Classic BBQ Sauce",
+      "chef": "Sean",
+      "familyStory": "We're not much for sauces but who doesn't like a bbq sauce on pork?  And this is better than what you get in the store.",
+      "ingredients": "1 cup ketchup, 1/4 cup yellow mustard, 1/4 apple cider vinegar, 3 tbsp tomato paste, 1/4 cup brown sugar, 1 tbsp onion powder, salt",
+      "instructions": "In a medium saucepan combine all ingredients and simmer on low 10 mins until incorporated.",
+      "inspiredBy": "",
+      "category": "side",
+      "likes": 0,
+      "id": 14
     }
   ]
 }
